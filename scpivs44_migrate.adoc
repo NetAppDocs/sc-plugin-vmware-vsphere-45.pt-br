@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_migrate.html 
+keywords:  
+summary: Você usa os cmdlets do SnapCenter Windows PowerShell para migrar o plug-in do SnapCenter para metadados do VMware vSphere do servidor SnapCenter baseado no Windows para o dispositivo virtual SnapCenter baseado no Linux para VMware vSphere. 
+---
+= Opções de migração e caminhos compatíveis
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você usa os cmdlets do SnapCenter Windows PowerShell para migrar o plug-in do SnapCenter para metadados do VMware vSphere do servidor SnapCenter baseado no Windows para o dispositivo virtual SnapCenter baseado no Linux para VMware vSphere.
+
+
+
+== Opções de migração
+
+Existem duas opções de migração:
+
+* Migração do SnapCenter
++
+É necessário migrar metadados para o seguinte do SnapCenter baseado no Windows:
+
++
+** Backups consistentes com VM executados pelo plug-in SnapCenter para VMware vSphere quando o plug-in estava sendo executado como um componente baseado no Windows do SnapCenter.
+** Metadados de proteção de dados consistentes com aplicações de bancos de dados virtualizados ou sistemas de arquivos executados por um plug-in baseado em aplicações SnapCenter com suporte do plug-in SnapCenter para VMware vSphere quando o plug-in estava sendo executado como um componente baseado no Windows do SnapCenter.
++
+Para migrar, use o cmdlet do Windows SnapCenter PowerShell `invoke-SCVOVAMigration.`
+
++
+Só é possível migrar metadados do SnapCenter 4,0 ou posterior.
+
+
+
+* Migrando do VSC
++
+Você pode migrar metadados do VSC 6,2.x (SMVI) para tarefas de backup que não estão integradas ao SnapCenter.
+
++
+Para migrar, use o utilitário de importação do NetApp: NetApp para SnapCenter e o console de armazenamento virtual. Certifique-se de selecionar a opção de migração VSC para SnapCenter.
+
++
+Você só pode migrar metadados para backups existentes. Por exemplo, se você não tiver backups existentes, não poderá migrar políticas somente.
+
+
+
+
+
+== Caminhos de migração compatíveis
+
+Consulte o link:scpivs44_release_notes.html["Notas de versão do plug-in do SnapCenter para VMware vSphere"^] para obter informações sobre caminhos de migração e atualização suportados.

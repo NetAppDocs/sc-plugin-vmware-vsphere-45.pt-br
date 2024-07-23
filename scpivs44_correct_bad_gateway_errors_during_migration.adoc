@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_correct_bad_gateway_errors_during_migration.html 
+keywords:  
+summary: 'Você pode encontrar um erro de "gateway ruim" quando você adiciona arquivos ou outro conteúdo manualmente ao plug-in do SnapCenter para VMware vSphere e depois migra.' 
+---
+= Corrija os erros "Bad Gateway" durante a migração
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Existem várias razões pelas quais você pode encontrar um erro "Bad Gateway".
+
+
+
+== Cenário 1
+
+Você adicionou manualmente arquivos ou outro conteúdo ao plug-in do SnapCenter para VMware vSphere e tentou migrar. Nesse cenário, não há espaço suficiente no dispositivo para o processo de migração.
+
+Para corrigir esse erro, remova todos os arquivos adicionados manualmente.
+
+
+
+== Cenário 2
+
+O plug-in do SnapCenter para a conexão do VMware vSphere foi interrompido ou o serviço foi interrompido durante a migração.
+
+O status do plug-in do SnapCenter para a conexão do VMware vSphere deve ser "conetado" durante o processo de migração. Você também pode atualizar manualmente a configuração do tempo limite no dispositivo virtual.

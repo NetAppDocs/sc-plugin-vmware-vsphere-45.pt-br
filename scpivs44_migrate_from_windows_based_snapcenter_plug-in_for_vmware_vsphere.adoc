@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_migrate_from_windows_based_snapcenter_plug-in_for_vmware_vsphere.html 
+keywords:  
+summary: Se você estiver usando o plug-in SnapCenter VMware baseado no Windows e quiser usar os recursos fornecidos pelo plug-in do SnapCenter para o dispositivo virtual VMware vSphere, será necessário implantar o dispositivo virtual e migrar os metadados do backup. 
+---
+= Migrar do plug-in SnapCenter baseado no Windows para o VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se você estiver usando o plug-in SnapCenter VMware baseado no Windows e quiser usar os recursos fornecidos pelo plug-in do SnapCenter para o dispositivo virtual VMware vSphere, será necessário implantar o dispositivo virtual e migrar os metadados do backup.
+
+.Antes de começar
+* Seus backups de bancos de dados e sistemas de arquivos virtualizados devem ser integrados ao SnapCenter.
+* Se o servidor SnapCenter for uma VM, é uma prática recomendada fazer um snapshot baseado em VMware antes da atualização.
+* Certifique-se de que o servidor SnapCenter está atualizado. Consulte o link:scpivs44_release_notes.html["Notas de versão do plug-in do SnapCenter para VMware vSphere"^] para obter informações sobre caminhos de atualização suportados.
+
+
+.Sobre esta tarefa
+Existem quatro passos básicos:
+
+. Faça o download do plug-in do SnapCenter para o arquivo VMware vSphere `.ova`.
+. Suspender trabalhos de backup para o plug-in SnapCenter VMware baseado no Windows.
+. Implante o plug-in do SnapCenter para o VMware vSphere OVA.
+. Migrar os metadados de backup do VMware baseados no Windows.
+
+
+.Passos
+. Faça o download do plug-in do SnapCenter para o arquivo VMware vSphere `.ova`.
++
+.. Faça login no site de suporte da NetApp (https://mysupport.netapp.com/products/index.html["https://mysupport.netapp.com/products/index.html"^]).
+.. Na lista de produtos, selecione *Plug-in SnapCenter para VMware vSphere* e, em seguida, clique no botão *DOWNLOAD LATEST RELEASE*.
+.. Baixe o `.ova` arquivo para qualquer VM.
+
+
+. Suspender trabalhos de cópia de segurança.
++
+Certifique-se de que nenhum trabalho de backup está sendo executado no plug-in SnapCenter baseado no Windows para VMware vSphere.
+
+. Implante o plug-in do SnapCenter para o VMware vSphere OVA.
++
+Como esta é uma nova instalação do plug-in SnapCenter VMware baseado em Linux, siga as etapas para implantar o OVA.
+
++
+link:scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["Implante o plug-in do SnapCenter para VMware vSphere"]
+
++
+link:scpivs44_post_deployment_required_operations_and_issues.html["Após a implantação, as operações e os problemas necessários"]
+
+. Migrar os metadados de backup do VMware baseados no Windows.
++
+link:scpivs44_migrate_from_snapcenter_backup_metadata_to_the_virtual_appliance.html["Migrar os metadados de backup do SnapCenter VMware baseados no Windows"]
+
+
